@@ -17,7 +17,8 @@ def fill_deco_year(record):
     2. date     -> timestamp
     3. timestamp-> year, month, day
     4. 0(decoration year) -> building year
-    4. drop(['date', 'decoration year', 'district', 'city', 'zip code', 'region', 'int zip code', 'ZIP', 'datetime', 'decoration year'], axis='columns')
+    5. drop(['date', 'decoration year', 'district', 'city', 'zip code', 'region', 'int zip code', 'ZIP', 'datetime', 'decoration year'], axis='columns')
+    6. move total cost to the last position
 """
 
 
@@ -28,13 +29,15 @@ def transfer(df, zip_df, fmt='%m/%d/%Y %H:%M'):
     # 2.
     df['date'] = df['date'].apply(lambda r: r[:-8] + '20' + r[-8:])
     df['datetime'] = pd.to_datetime(df['date'], format=fmt)
+    df['timestamp'] = df['datetime'].values.astype('int') // 10 ** 9
     # 3.
     df[['transaction year', 'transaction month', 'transaction day']] = df.apply(expand_date, axis=1, result_type='expand')
     # 4.
     df['filled decoration year'] = df.apply(fill_deco_year, axis=1)
     # 5.
     df = df.drop(['date', 'decoration year', 'district', 'city', 'zip code', 'region', 'int zip code', 'ZIP', 'datetime', 'decoration year'], axis='columns')
-
+    # 6.
+    df['total cost'] = df.pop('total cost')
     return df
 
 
