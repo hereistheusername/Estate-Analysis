@@ -1,5 +1,5 @@
-number of rooms,security level of the community,residence space,building space,noise level,waterfront,view,air quality level,aboveground space ,basement space,building year,exchange rate,LAT,LNG,timestamp,transaction year,transaction month,transaction day,filled decoration year,total cost
-5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+number of rooms,security level of the community,residence space,building space,noise level,waterfront,view,air quality level,aboveground space ,basement space,building year,exchange rate,LAT,LNG,timestamp,transaction year,transaction month,transaction day,filled decoration year,total
+5,2.5,2820,67518,2.0,0,0,3,2820,0,1979,6.784829586,47.557085,-122.007748,1398988800,2014,5,2,2014,675000.0001046696
 2,1.0,1210,9400,1.0,0,0,2,1210,0,1949,6.24312897,47.544034,-122.349874,1398988800,2014,5,2,1949,234999.99998835428
 4,2.5,2200,9397,2.0,0,0,3,2200,0,1987,6.010127234,47.310617,-122.263291,1398988800,2014,5,2,2000,237227.85712483764
 3,1.5,1200,9720,1.0,0,0,4,1200,0,1965,7.560375075,47.367737,-122.117029,1398988800,2014,5,2,1965,242499.99993492095
